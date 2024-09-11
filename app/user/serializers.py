@@ -6,6 +6,7 @@ from django.utils.translation import gettext as _
 
 from rest_framework import serializers
 
+
 class UserSerializer(serializers.ModelSerializer):
     """Serializer for the user object."""
 
@@ -51,5 +52,5 @@ class AuthTokenSerializer(serializers.Serializer):
             msg = _('Unable to authenticate with provided credentials.')
             raise serializers.ValidationError(msg, code='authorization')
 
-        attrs['user']=user
+        attrs['user'] = user
         return attrs

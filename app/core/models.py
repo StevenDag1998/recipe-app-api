@@ -1,7 +1,8 @@
 """
 Database models.
 """
-import uuid, os
+import uuid
+import os
 
 from django.conf import settings
 from django.db import models
@@ -10,7 +11,6 @@ from django.contrib.auth.models import (
     BaseUserManager,
     PermissionsMixin,
 )
-
 
 
 def recipe_image_file_path(instance, filename):
